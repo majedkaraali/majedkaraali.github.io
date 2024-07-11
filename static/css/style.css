@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+ 
+}
+
+.header-p {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:900;
+  font-style: normal;
+}
+
+
+
+.header a{
+    text-decoration: none;
+    color: black;
+}
+
+.header a:hover{
+    color: blanchedalmond;
+
+
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: rgba(81, 253, 196, 0.753);
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 20px;
+    font-family: "Urbanist", sans-serif;
+    font-optical-sizing: auto;
+    font-size: large;
+    font-weight:500 ;
+    font-style:normal;
+   
+}
+
+
+
+
+
+.header ul{
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+
+body {
+    margin: 0;
+   
+    background: linear-gradient(45deg, #0b163a, #291c64);
+    overflow: hidden;
+    color: white;
+    overflow-y: scroll;
+
+}
+
+
+
+
+.about{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600;
+    font-family: "Urbanist", sans-serif;
+    font-size: large;
+}
+
+.arts{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.name{
+   color: rgba(81, 253, 196, 0.753);
+}
+
+
+
+.title{
+    max-width: 60%;
+}
+
+.highlight{
+    color: rgba(81, 253, 196, 0.753);
+    font-style: italic;
+    font-weight: bold;
+}
+
+.about img{
+    max-width: 220px;
+    max-height: 220px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgba(81, 253, 196, 0.753);
+
+}
+
+.about img:hover{
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.753);
+}
+
+.resume{
+    background-color: #3d66ee;
+    border-radius: 2px;
+    font-family: "Urbanist", sans-serif;
+    font-size: large;
+    border-width: 0px;
+    padding: 10px;
+}
+
+.about .social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.about .social i{
+    font-size: x-large;
+}
+
+.exepertise{
+    font-family: "Urbanist", sans-serif;
+    height: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: large;
+
+}
+
+.t{
+    color:  rgba(81, 253, 196, 0.753);;
+    align-self: flex-start;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-family: "Urbanist", sans-serif;
+    
+}
+
+.exepertise p{
+    max-width: 600px;
+}
+
+.exepertise ul{
+    
+    margin: 1em 0 1em 0;
+    list-style-position: inside;
+    border-style: solid;
+    border-width: 0.07em;
+    border-color: rgb(255, 255, 255);
+    border-radius: 0.1em;
+    padding: 1em 5em;
+}
+
+.work{
+    font-family: "Urbanist", sans-serif;
+    height: 600;
+    font-size: large;
+
+}
