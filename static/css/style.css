@@ -61,7 +61,13 @@ body {
 
 }
 
-
+.custom-hr {
+    width: 100%; /* Adjust the width as needed */
+    border: none; /* Remove the default border */
+    border-top: 1px solid #ffffff; /* Add a top border to make it thin */
+    margin: 20px auto; /* Center the <hr> and add margin */
+  }
+  
 
 
 .about{
@@ -167,7 +173,50 @@ body {
 
 .work{
     font-family: "Urbanist", sans-serif;
-    height: 600;
+    height: 600px;
     font-size: large;
+
+}
+
+
+.work img{
+    max-width: 550px;
+    height: auto;
+    
+}
+
+.project figure{
+    border-style:dashed;
+    border-width: 1px;
+    border-color: rgb(144, 201, 79);
+}
+
+.project{
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+}
+
+
+
+
+.pojects{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.contact{
+    font-family: "Urbanist", sans-serif;
+    height: 600px;
+    font-size: large;
+    display: flex;
+    align-items: start;
+    justify-content: center;
 
 }
