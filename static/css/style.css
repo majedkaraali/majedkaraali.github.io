@@ -12,7 +12,7 @@ html {
 
 
 #toggle-menu{
-    display: none;
+    display: block;
 }
 
 .open-menu,.close-menu{
@@ -76,10 +76,10 @@ body {
 }
 
 .custom-hr {
-    width: 100%; /* Adjust the width as needed */
-    border: none; /* Remove the default border */
-    border-top: 1px solid #ffffff; /* Add a top border to make it thin */
-    margin: 20px auto; /* Center the <hr> and add margin */
+    width: 100%; 
+    border: none; 
+    border-top: 1px solid #ffffff; 
+    margin: 20px auto; 
   }
   
 
@@ -345,14 +345,7 @@ textarea{
 
 
 
-
-
-
-
-
-
-@media (max-width:500px){
-
+@media (max-width:600px){
 
     .links{
         flex-direction: column;
@@ -370,12 +363,27 @@ textarea{
 
     }
 
+    .header ul{
+        display: none;
+    }
+
+    .open-menu,.close-menu{
+        display: block;
+    }
+
     .links a{
         box-sizing: border-box;
         width: 100%;
         height: auto;
         padding: 20px 30px;
     }
+
+
+    #toggle-menu:checked ~ .header{
+        background-color: #000000;
+ 
+    }
+
 }
 
 
