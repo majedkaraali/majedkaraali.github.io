@@ -12,8 +12,11 @@ html {
 
 
 #toggle-menu{
-    display: block;
+    display: none;
 }
+
+
+
 
 .open-menu,.close-menu{
     display: none;
@@ -349,7 +352,7 @@ textarea{
 
     .links{
         flex-direction: column;
-        gap: 5px;
+        gap: 50px;
         align-items: flex-start;
         justify-content: space-evenly;
         position: fixed;
@@ -372,18 +375,24 @@ textarea{
     }
 
     .links a{
-        box-sizing: border-box;
+      
         width: 100%;
         height: auto;
-        padding: 20px 30px;
+        margin-bottom: 77px;
+
     }
 
 
-    #toggle-menu:checked ~ .header{
-        background-color: #000000;
- 
+
+
+    #toggle-menu:checked ~ .links{
+        display: block;
     }
+
+
+    
+  
+    
 
 }
-
 
