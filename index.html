@@ -17,8 +17,8 @@
     <div class="header">
         <p logo>Majed Karaali</p>
         <ul>
-            <li><a href="#">Exepertise</a></li>
-            <li><a href="#">Work</a></li>
+            <li><a href="#" onclick="scrollTo('expertise')" >Exepertise</a></li>
+            <li><a href="#" onclick="scroll_to('work')">Work</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Resume</a></li>
           
@@ -53,7 +53,7 @@
 
     <hr class="custom-hr">
 
-    <h1 class="t" style="margin-bottom: 30px;">Exepertise</h1>
+    <h1 class="t" id="expertise" style="margin-bottom: 30px;">Exepertise</h1>
 
     <div class="exepertise">
         
@@ -91,7 +91,7 @@
 
 
     <h1 class="t">Work</h1>
-    <div class="work">
+    <div class="work" id="work">
         
         <p style="margin: 40px 40px;">Below you can see some projects I've been working on lately.</p>
 
@@ -132,7 +132,7 @@
     <p class="text">Feel free to get in touch with me at majedkaraali@gmail.com or connect with me on  <a href="">LinkedIn</a>, <a href="">Twitter</a>, <a href="">GitHub</a>.</p>
 
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="container">
             <form action="">
 
@@ -178,5 +178,34 @@
     
 </body>
 
+
+<script>
+    function scrollTo(to) {
+      alert(2);
+      const element = document.getElementById(to);
+      const headerOffset = 90; 
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+
+
+    function scroll_to(target){
+        alert(target);
+        const element = document.getElementById(target);
+        const headerOffset = 90; 
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+    </script>
 
 </html>

@@ -4,6 +4,11 @@
  
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 .header-p {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
