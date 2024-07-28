@@ -52,10 +52,10 @@
 
             <div data-aos="fade-down" data-aos-duration="1000" class="social">
                 <p class="resume">Resume</p>
-                <i class="fa-brands fa-github"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-solid fa-envelope"></i>
+                <a href="https://github.com/majedkaraali/"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/majedkaraali"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/majed-karaali"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:majedkaraali@gmail.com"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
 
@@ -148,8 +148,8 @@
     <hr>
 
     <h1 class="t-head" id="contact">Contact</h1>
-
-    <p  data-aos="fade-up" data-aos-duration="1000" class="text">Feel free to get in touch with me at majedkaraali@gmail.com or connect with me on  <a href="">LinkedIn</a>, <a href="">Twitter</a>, <a href="">GitHub</a>.</p>
+    <div id="notification" class="notification">E-mail copied!</div>
+    <p  data-aos="fade-up" data-aos-duration="1000" class="text">Feel free to get in touch with me at <span id="mymail" class="mymail">majedkaraali@gmail.com</span> or connect with me on  <a href="https://www.linkedin.com/in/majed-karaali">LinkedIn</a>, <a href="https://www.instagram.com/majedkaraali">Instagram</a>, <a href="https://github.com/majedkaraali/">GitHub</a>.</p>
 
 
     <div  class="contact" id="contact">
@@ -188,22 +188,27 @@
         </div>
 
         <div  data-aos="fade-up" data-aos-duration="1000" class="info">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ad ea ullam perspiciatis iure, consequatur unde voluptatibus quas pariatur expedita officia maxime et? Commodi nemo quidem labore delectus accusamus illum?</p>
+            <p>I'm generally open to freelance work and other requests.</p>
         </div>
         
     </div>
 
 
+   
+
+
     <script>
         AOS.init({
-          once: true // This will make the animation happen only once
+          once: true 
         });
     </script>
       
     
 </body>
 
-
+<div class="footer">
+    <p>Made with <span class="heart">♥ </span> Majed Karaali 2024 All rights reserved. </p>
+</div>
 <script>
    
 
@@ -217,6 +222,25 @@
         });
     }
     </script>
+
+
+<script>
+    document.getElementById('mymail').addEventListener('click', function(event) {
+        const text = this.innerText;
+        navigator.clipboard.writeText(text).then(function() {
+            const notification = document.getElementById('notification');
+            notification.style.left = event.pageX + 'px';
+            notification.style.top = event.pageY + 'px';
+            notification.style.opacity = 1;
+            
+            setTimeout(() => {
+                notification.style.opacity = 0;
+            }, 2000);
+        }).catch(function(error) {
+            console.error('Could not copy text: ', error);
+        });
+    });
+</script>
 
 
 </html>

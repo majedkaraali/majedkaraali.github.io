@@ -5,6 +5,11 @@
     user-select: none;
 }
 
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
 a:hover{
     cursor: pointer;
 }
@@ -170,6 +175,27 @@ body {
     padding: 10px;
 }
 
+.resume:hover{
+    cursor: pointer;
+}
+
+.mymail{
+    color: #367dc0;
+    cursor: pointer;
+}
+
+.notification {
+    position: absolute;
+    padding: 8px;
+    background-color: #ae55b1;
+    color: white;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 1000;
+}
+
 .about .social {
     margin-top: 20px;
     display: flex;
@@ -242,9 +268,9 @@ body {
 
 
 .work img{
-    max-width: 550px; /* Set the maximum width */
-    width: 100%; /* Make it responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 550px; 
+    width: 100%; 
+    height: auto; 
     
 }
 
@@ -380,7 +406,18 @@ textarea{
     margin-bottom:82px;
 }
 
-
+.footer{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(81, 253, 196, 0.753);
+    font-family: "Urbanist", sans-serif;
+}
+.heart{
+    color: red;
+}
 @media (max-width:600px){
 
   
@@ -401,6 +438,12 @@ textarea{
         width: 300px;
         box-shadow: -5px 0 5px  rgba(0, 0, 0, 0.25);
         transition: 0.75s ease-out;
+    }
+
+    .social {
+        max-width: 50%;
+       
+
     }
 
     .open-menu,.close-menu{
@@ -434,7 +477,7 @@ textarea{
 
     .me{
         margin-top: 82px;
-        max-width: 70%;
+        max-width: 80%;
     }
     .about{
         align-items: center;
@@ -443,6 +486,9 @@ textarea{
         font-size: medium;
     }
 
+    .title{
+        max-width: 100%;
+    }
     .exepertise{
         font-size: medium;
     }
@@ -472,6 +518,7 @@ textarea{
 
     .info{
         max-width: 80%;
+        align-self: center;
     }
 
     .container{
