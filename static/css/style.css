@@ -23,7 +23,7 @@ html {
 }
 
 .header{
-    position: fixed;
+ 
     width: 100%;
     background-color: rgba(81, 253, 196, 0.753);
     display: flex;
@@ -35,6 +35,7 @@ html {
     font-size: large;
     font-weight:500 ;
     font-style:normal;
+
    
 }
 
@@ -92,15 +93,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 600;
+    min-height: 600px;
     font-family: "Urbanist", sans-serif;
     font-size: large;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    
 }
 
 .arts{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    max-width: 50%;
 }
 
 .name{
@@ -167,8 +172,8 @@ body {
 }
 
 .exepertise{
+    min-height: 600px;
     font-family: "Urbanist", sans-serif;
-    height: 600;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -205,6 +210,7 @@ body {
 
 .langs{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 50px;
@@ -218,7 +224,7 @@ body {
 
 .work{
     font-family: "Urbanist", sans-serif;
-    height: 600px;
+    min-height: 600px;
     font-size: large;
 
 }
@@ -260,7 +266,7 @@ body {
 
 .contact{
     font-family: "Urbanist", sans-serif;
-    height: 600px;
+    min-height: 600px;
     font-size: large;
     display: flex;
     align-items: center;
@@ -382,11 +388,23 @@ textarea{
 
     }
 
-
-
-
+  
     #toggle-menu:checked ~ .links{
         display: block;
+    }
+
+
+    .arts{
+        max-width: 70%;
+    }
+    .about{
+        align-items: center;
+        justify-content: center;
+        font-size: medium;
+    }
+
+    .exepertise{
+        font-size: medium;
     }
 
 
