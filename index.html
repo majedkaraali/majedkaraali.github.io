@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/15a7fd7ced.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
 </head>
 
 <body>
@@ -40,8 +43,8 @@
     </div>
 
 
-    <div class="about"> 
-        <div class="arts">
+    <div  data-aos="fade-down" data-aos-duration="1000"  class="about"> 
+        <div class="me">
             <h3>Hi there, I'm </h3>
             <h2 class="name">Majed Karaali</h2>
             
@@ -69,7 +72,7 @@
 
     <h1 class="t-head" id="exepertise" style="margin-bottom: 30px;">Exepertise</h1>
 
-    <div class="exepertise">
+    <div data-aos="fade-up" data-aos-duration="1000" class="exepertise">
         <div class="arts">
             <p class="ex-title">At college I learned about business and accounting and marketing, and a lot of cool stuff there.
             My specialization gives me the ability to think about your project from different points of view, the business one and technical view as well..</p>
@@ -105,7 +108,7 @@
 
 
     <h1 class="t-head" id="work">Work</h1>
-    <div class="work">
+    <div  data-aos="fade-up" data-aos-duration="1000" class="work">
         
         <p style="margin: 40px 40px;">Below you can see some projects I've been working on lately.</p>
 
@@ -150,7 +153,7 @@
     <p class="text">Feel free to get in touch with me at majedkaraali@gmail.com or connect with me on  <a href="">LinkedIn</a>, <a href="">Twitter</a>, <a href="">GitHub</a>.</p>
 
 
-    <div class="contact" id="contact">
+    <div  data-aos="fade-up" data-aos-duration="1000" class="contact" id="contact">
         <div class="container">
             <form action="">
 
@@ -192,7 +195,12 @@
     </div>
 
 
-
+    <script>
+        AOS.init({
+          once: true // This will make the animation happen only once
+        });
+    </script>
+      
     
 </body>
 
@@ -202,7 +210,7 @@
 
     function scroll_to(target){
         const element = document.getElementById(target);
-        const headerOffset = 82; 
+        const headerOffset = 93; 
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({
@@ -213,3 +221,5 @@
 
 
 </html>
+
+
