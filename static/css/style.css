@@ -23,7 +23,7 @@ html {
 }
 
 .header{
- 
+    position: fixed;
     width: 100%;
     background-color: rgba(81, 253, 196, 0.753);
     display: flex;
@@ -63,7 +63,7 @@ html {
   }
   
 
-.header ul{
+.links{
     display: flex;
     list-style: none;
     gap: 60px;
@@ -89,7 +89,7 @@ body {
 
 
 .about{
-   
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,7 +127,7 @@ body {
 }
 
 .title{
-    max-width: 60%;
+    max-width: 80%;
     
 
 }
@@ -183,7 +183,7 @@ body {
 
 }
 
-.t{
+.t-head{
     color:  rgba(81, 253, 196, 0.753);;
     align-self: flex-start;
     margin-left: 30px;
@@ -231,15 +231,16 @@ body {
 
 
 .work img{
-    max-width: 550px;
-    height: auto;
+    max-width: 550px; /* Set the maximum width */
+    width: 100%; /* Make it responsive */
+    height: auto; /* Maintain aspect ratio */
     
 }
 
-.project figure{
+.project figure img{
     border-style:dashed;
     border-width: 1px;
-    border-color: rgb(144, 201, 79);
+    border-color:yellow
 }
 
 
@@ -271,6 +272,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 
 }
 
@@ -356,23 +358,11 @@ textarea{
 
 @media (max-width:600px){
 
+  
+
+
+
     .links{
-        flex-direction: column;
-        gap: 50px;
-        align-items: flex-start;
-        justify-content: space-evenly;
-        position: fixed;
-        top: 0;
-        right: 0;
-        background-color: rgb(98, 228, 185);
-        z-index: 10;
-        width: 300px;
-        height: 100%;
-        box-shadow: -5px 0 5px  rgba(0, 0, 0, 0.25);
-
-    }
-
-    .header ul{
         display: none;
     }
 
@@ -380,26 +370,41 @@ textarea{
         display: block;
     }
 
-    .links a{
-      
-        width: 100%;
-        height: auto;
-        margin-bottom: 77px;
-
-    }
-
+  
   
     #toggle-menu:checked ~ .links{
-        display: block;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        gap:25px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgb(98, 228, 185);
+        z-index: 10;
+        width: 300px;
+        box-shadow: -5px 0 5px  rgba(0, 0, 0, 0.25);
+    }
+
+
+    #toggle-menu:checked ~ .links label{
+ 
+        margin-bottom: 80px;
+        margin-top: 40px;
+    
     }
 
 
     .arts{
+        margin-top: 82px;
         max-width: 70%;
     }
     .about{
         align-items: center;
         justify-content: center;
+        gap: 50px;
         font-size: medium;
     }
 
@@ -407,10 +412,27 @@ textarea{
         font-size: medium;
     }
 
+    .t-head{
+        font-size: large;
+    }
 
-    
-  
-    
+    .ex-title{
+        max-width: 50%;
+        font-size: medium;
+    }
 
+    .lan img{
+        width: 64px;
+        height: 64px;
+    }
+    
+    .work img{
+    max-width: 300px;
+    height: auto;
+    }
+
+    .projects{
+        margin-bottom: 50px;
+    }
 }
 
