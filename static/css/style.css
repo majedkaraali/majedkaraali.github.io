@@ -385,8 +385,7 @@ textarea{
 
   
 
-
-
+    
     .links{
         height: 100%;
         display: flex;
@@ -422,6 +421,16 @@ textarea{
     
     }
 
+    #toggle-menu:checked ~ #overlay{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+
+    }
+
 
     .me{
         margin-top: 82px;
@@ -442,10 +451,6 @@ textarea{
         font-size: large;
     }
 
-    .ex-title{
-        max-width: 50%;
-        font-size: medium;
-    }
 
     .lan img{
         width: 64px;
@@ -457,6 +462,21 @@ textarea{
     height: auto;
     }
 
-    
+    .ex-arts{
+        max-width: 70%;
+    }
+
+    .langs{
+        max-width: 70%;
+    }
+
+    .info{
+        max-width: 80%;
+    }
+
+    .container{
+        max-width: 80%;
+    }
+
 }
 
