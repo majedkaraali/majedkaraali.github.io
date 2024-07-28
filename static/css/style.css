@@ -5,6 +5,10 @@
     user-select: none;
 }
 
+a:hover{
+    cursor: pointer;
+}
+
 html {
     scroll-behavior: smooth;
   }
@@ -355,6 +359,10 @@ textarea{
 }
 
 
+.projects{
+    margin-bottom: 50px;
+}
+
 
 @media (max-width:600px){
 
@@ -431,8 +439,6 @@ textarea{
     height: auto;
     }
 
-    .projects{
-        margin-bottom: 50px;
-    }
+    
 }
 
