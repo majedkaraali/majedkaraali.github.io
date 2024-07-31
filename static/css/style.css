@@ -527,3 +527,12 @@ textarea{
 
 }
 
+
+@media (max-width:375px){
+    .about .social {
+        margin-top: 20px;
+        gap: 20px;
+        font-size: small;
+    }
+
+}
