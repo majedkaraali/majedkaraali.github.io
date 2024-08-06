@@ -274,11 +274,38 @@ body {
     
 }
 
+.project{
+    position: relative;
+}
 .project figure img{
     border-style:dashed;
     border-width: 1px;
     border-color:yellow
 }
+
+
+.project figure img:hover{
+    border-style: double;
+    border-color: #367dc0;
+}
+
+
+.project figure img:hover + .cover{
+    background-color: #133ec9;
+    
+}
+
+.cover{
+    display:block;
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    top: 85%;
+    left:0;
+    z-index:-2;
+    background-color: #000000;
+}
+
 
 
 .pojects{
