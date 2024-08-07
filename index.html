@@ -274,10 +274,7 @@
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
-   if (name === "" || email === "" || message === "") {
-            alert("Please fill out all required fields.");
-            return;
-        }
+
    btn.value = 'Sending...';
 
    const serviceID = 'default_service';
