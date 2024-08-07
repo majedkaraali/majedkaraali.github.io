@@ -11,7 +11,6 @@
     <script src="https://kit.fontawesome.com/15a7fd7ced.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -166,33 +165,33 @@
 
     <div  class="contact" id="contact">
         <div  data-aos="fade-up" data-aos-duration="1000" class="container">
-            <form >
+            <form id="form">
                 <div class="row">
                     <div class="sm1">
                         <label for="name">Name</label>
-                        <input type="name" id="name">
+                        <input type="name" id="name" name="name">
                     </div>
 
                     <div class="sm1">
                         <label for="email">Email</label>
-                        <input type="email" id="email">
+                        <input type="text" name="mail" id="mail">
+
                     </div>
                 </div>
-
-                
             
                 <div class="sm2">
                     <label for="mes">Phone</label>
-                    <input type="tel" name="phone" id="phone"></textarea>
+                    <input type="text" name="phone" id="phone">
+
                 </div>
 
                 <div class="sm2">
                     <label for="mes">Message</label>
-                    <textarea name="mes" id="mes"></textarea>
+                    <textarea name="message" id="message"></textarea>
                 </div>
                
                 
-                <button onclick="SendMail()" >Send</button>
+                <input type="submit" id="button" value="Send Email" >
 
             </form>
              
@@ -208,11 +207,7 @@
    
 
 
-    <script>
-        AOS.init({
-          once: true 
-        });
-    </script>
+
       
     
 </body>
@@ -224,13 +219,19 @@
 
 
 
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 <script type="text/javascript">
-    (function(){
-       emailjs.init({
-         publicKey: "J0qd3i5oqqYTv9p_x",
-       });
-    })();
- </script>
+  emailjs.init('J0qd3i5oqqYTv9p_x')
+</script>
+
+<script>
+    AOS.init({
+      once: true 
+    });
+</script>
 
 <script>
    
@@ -265,21 +266,31 @@
     });
 </script>
 
-<script>
-    function SendMail() {
-        alert("1")
-        let params = {
-            name : document.getElementById("name").value,
-            email : document.getElementById("email").value,
-            message : document.getElementById("mess").value,
-            phone : document.getElementById("phone").value,
-        }
 
-        alert(params)
-        emailjs.send("service_hese5km","template_lgva7k8",params).then(alert("Sent"))
-    }
+<script>
+    const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_lgva7k8';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+      document.getElementById('form').reset();
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
 </script>
- 
+
 </html>
 
 
