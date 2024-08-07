@@ -76,14 +76,14 @@
             My specialization gives me the ability to think about your project from different points of view, the business one and technical view as well..</p>
             <p class="ex-title">Here are a few technologies I've been working with recently:</p>
         </div>
-        <div  data-aos="fade-up" data-aos-duration="1000" class="langs">
+        <div   class="langs">
 
-            <div class="lan"><img src="images/langs/html-5_5968267.png" alt=""></div>
-            <div class="lan"><img src="images/langs/css-3_5968242.png" alt=""></div>
-            <div class="lan"><img src="images/langs/js_5968292.png" alt=""></div>
-            <div class="lan"><img src="images/langs/python_5968350.png" alt=""></div>
-            <div class="lan"><img src="images/langs/atom_5968218.png" alt=""></div>
-            <div class="lan"><img src="images/langs/NET_Core_Logo.svg.png" alt=""></div>
+            <div data-aos="fade-right" data-aos-duration="1000"  class="lan spin-element"><img src="images/langs/html-5_5968267.png" alt=""></div>
+            <div data-aos="fade-right" data-aos-duration="1000" class="lan spin-element"><img src="images/langs/css-3_5968242.png" alt=""></div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="lan spin-element"><img src="images/langs/js_5968292.png" alt=""></div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="lan spin-element"><img src="images/langs/python_5968350.png" alt=""></div>
+            <div data-aos="fade-left" data-aos-duration="1000" class="lan spin-element"><img src="images/langs/atom_5968218.png" alt=""></div>
+            <div data-aos="fade-left" data-aos-duration="1000" class="lan spin-element"><img src="images/langs/NET_Core_Logo.svg.png" alt=""></div>
 
         </div>
 
@@ -191,7 +191,7 @@
                 </div>
                
                 
-                <input type="submit" id="button" value="Send Email" >
+                <input class="send" type="submit" id="button" value="Send Email" >
 
             </form>
              
@@ -273,7 +273,10 @@
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
-
+   if (name === "" || email === "" || message === "") {
+            alert("Please fill out all required fields.");
+            return;
+        }
    btn.value = 'Sending...';
 
    const serviceID = 'default_service';
@@ -289,6 +292,29 @@ document.getElementById('form')
       alert(JSON.stringify(err));
     });
 });
+</script>
+
+
+
+<script>
+    // script.js
+document.addEventListener('DOMContentLoaded', function() {
+    var controller = new ScrollMagic.Controller();
+
+    var spinElements = document.querySelectorAll('.spin-element');
+    spinElements.forEach(function(element) {
+        var tween = gsap.to(element, {rotation: 360, duration: 2});
+
+        new ScrollMagic.Scene({
+            triggerElement: element,
+            triggerHook: 0.8, // Trigger when element is 80% from the top of the viewport
+            reverse: false // Do not reverse the animation when scrolling back up
+        })
+        .setTween(tween)
+        .addTo(controller);
+    });
+});
+
 </script>
 
 </html>

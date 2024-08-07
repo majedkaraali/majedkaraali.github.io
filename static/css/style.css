@@ -244,6 +244,16 @@ body {
     padding: 1em 5em;
 }
 
+/* styles.css */
+.spin-element {
+    transition: transform 2s; 
+    perspective: 1000px; 
+}
+
+.spin-element:hover {
+    transform: rotateY(360deg); 
+}
+
 
 .langs{
     display: flex;
@@ -407,11 +417,16 @@ textarea{
 
 .send{
     background-color: #3d66ee;
-    border-radius: 2px;
+    border-radius: 1px;
     font-family: "Urbanist", sans-serif;
     font-size: large;
     border-width: 0px;
-    padding: 10px;
+    padding: 5px;
+    width: 95%;
+}
+
+.send:hover{
+    cursor: pointer;
 }
 
 .contact p{
