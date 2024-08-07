@@ -422,7 +422,7 @@ textarea{
     font-size: large;
     border-width: 0px;
     padding: 5px;
-    width: 95%;
+    max-width: 95%;
 }
 
 .send:hover{
@@ -565,6 +565,10 @@ textarea{
 
     .container{
         max-width: 80%;
+    }
+
+    .send{
+        max-width: 95%;
     }
 
 }
